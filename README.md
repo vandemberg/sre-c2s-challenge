@@ -39,7 +39,14 @@ Para cada bug identificado e corrigido, adicione uma entrada em seu relatório d
 - **Correção Realizada:** Descreva como você corrigiu o bug.
 
 ## Submissão
-Após corrigir todos os bugs, faça um Fork do projeto e abra um pull request com suas alterações e descrições dos bugs corrigidos para a branch principal do repositório. Inclua seu relatório de bugs no corpo do pull request.
+Após a correção completa de todos os bugs identificados, realize um Fork do projeto e crie um pull request com as alterações efetuadas para a branch principal do repositório. Assegure-se de incluir um relatório detalhado dos bugs corrigidos no corpo do pull request.
+
+Conceda a permissão de Administrador para o repositório forkado aos seguintes usuários:
+
+[fellipe] https://github.com/fellipe30k
+[vandemberg] https://github.com/vandemberg
+
+Por favor, envie o link do repositório forkado após estas etapas.
 
 ## Avaliação
 Você será avaliado pela precisão na identificação dos bugs, eficácia das correções aplicadas e pela clareza do seu relatório de bugs.
