@@ -4,12 +4,20 @@
       <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
     <% end %>
 
-    <%= render @lead %>
+    <p class="my-5">
+      <strong><%= t('activerecord.attributes.lead.name') %>:</strong> <%= @lead.name %>
+    </p>
+    <p class="my-5">
+      <strong><%= t('activerecord.attributes.lead.email') %>:</strong> <%= @lead.email %>
+    </p>
+    <p class="my-5">
+      <strong><%= t('activerecord.attributes.lead.phone') %>:</strong> <%= @lead.phone %>
+    </p>
 
-    <%= link_to "Edit this lead", edit_lead_path(@lead), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to t("edit_lead"), edit_lead_path(@lead), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <div class="inline-block ml-2">
-      <%= button_to "Destroy this lead", lead_path(@lead), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+      <%= button_to t("destroy_lead"), lead_path(@lead), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
     </div>
-    <%= link_to "Back to leads", leads_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to t("back_leads"), leads_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
   </div>
 </div>

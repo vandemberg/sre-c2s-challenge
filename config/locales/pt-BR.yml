@@ -1,0 +1,29 @@
+pt-BR:
+  activerecord:
+    attributes:
+      lead:
+        id: "Id"
+        name: "Nome"
+        email: "E-mail"
+        phone: "Telefone"
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+    errors:
+      format: '%{attribute} %{message}'
+      not_save_lead: "proibiu que esse lead fosse salvo"
+      messages:
+          blank: "não pode ficar em branco"
+          invalid: "não é válido"
+  notices:
+    created_lead: "Lead criado com sucesso."
+    updated_lead: "Lead atualizado com sucesso."
+    destroyed_lead: "Lead excluído com sucesso."
+  create_lead: "Criar Lead"
+  update_lead: "Atualizar Lead"
+  new_lead: "Novo Lead"
+  show_lead: "Mostrar Lead"
+  edit_lead: "Editar Lead"
+  destroy_lead: "Excluir Lead"
+  back_leads: "Voltar aos leads"
+  error: "erro"
+  errors: "erros"

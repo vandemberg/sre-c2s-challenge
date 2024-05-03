@@ -25,7 +25,7 @@ class LeadsController < ApplicationController
 
     respond_to do |format|
       if @lead.save
-        format.html { redirect_to lead_url(@lead), notice: "Lead was successfully created." }
+        format.html { redirect_to lead_url(@lead), notice: t("notices.created_lead") }
         format.json { render :show, status: :created, location: @lead }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class LeadsController < ApplicationController
   def update
     respond_to do |format|
       if @lead.update(lead_params)
-        format.html { redirect_to lead_url(@lead), notice: "Lead was successfully updated." }
+        format.html { redirect_to lead_url(@lead), notice: t("notices.updated_lead") }
         format.json { render :show, status: :ok, location: @lead }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +52,7 @@ class LeadsController < ApplicationController
     @lead.destroy!
 
     respond_to do |format|
-      format.html { redirect_to leads_url, notice: "Lead was successfully destroyed." }
+      format.html { redirect_to leads_url, notice: t("notices.destroyed_lead") }
       format.json { head :no_content }
     end
   end
