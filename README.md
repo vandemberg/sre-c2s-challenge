@@ -39,7 +39,7 @@ Para cada bug identificado e corrigido, adicione uma entrada em seu relatório d
 - **Correção Realizada:** Descreva como você corrigiu o bug.
 
 ## Submissão
-Após corrigir todos os bugs, faça um commit das suas alterações e abra um pull request para a branch principal do repositório. Inclua seu relatório de bugs no corpo do pull request.
+Após corrigir todos os bugs, faça um Fork do projeto e abra um pull request com suas alterações e descrições dos bugs corrigidos para a branch principal do repositório. Inclua seu relatório de bugs no corpo do pull request.
 
 ## Avaliação
 Você será avaliado pela precisão na identificação dos bugs, eficácia das correções aplicadas e pela clareza do seu relatório de bugs.
