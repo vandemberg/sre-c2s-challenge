@@ -8,6 +8,7 @@ class LeadsController < ApplicationController
 
   # GET /leads/1 or /leads/1.json
   def show
+    @lead = Lead.find(params[:id])
   end
 
   # GET /leads/new
@@ -17,6 +18,7 @@ class LeadsController < ApplicationController
 
   # GET /leads/1/edit
   def edit
+    @lead = Lead.find(params[:id])
   end
 
   # POST /leads or /leads.json
@@ -65,6 +67,6 @@ class LeadsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def lead_params
-      params.require(:lead).permit(:email)
+      params.require(:lead).permit(:name, :email, :phone)
     end
 end

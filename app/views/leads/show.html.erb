@@ -1,15 +1,30 @@
-<div class="mx-auto md:w-2/3 w-full flex">
-  <div class="mx-auto">
-    <% if notice.present? %>
-      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
-    <% end %>
+<div class="mx-auto md:w-2/3 w-full">
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= t('notices.lead_created') %></p>
+  <% end %>
 
-    <%= render @lead %>
+  <div id="<%= dom_id @lead %>">
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Name:</strong>
+      <%= @lead.name %>
+    </p>
 
-    <%= link_to "Edit this lead", edi_lead_path(@lead), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <div class="inline-block ml-2">
-      <%= button_to "Destroy this lead", lead_path(@lea), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
-    </div>
-    <%= link_to "Back to leads", leads_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Email:</strong>
+      <%= @lead.email %>
+    </p>
+
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Phone:</strong>
+      <%= @lead.phone %>
+    </p>
   </div>
+
+  <% if action_name != "show" %>
+    <%= link_to t('views.leads.edit_lead'), edit_lead_path(@lead), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= button_to t('views.leads.destroy_lead'), lead_path(@lead), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+
+  <%= link_to t('views.leads.back_to_leads'), leads_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
 </div>

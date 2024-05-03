@@ -1,22 +1,22 @@
-<div id="<%= dom_id lead %>">
+<div id="<%= dom_id(lead) %>">
   <p class="my-5">
-    <strong class="block font-medium mb-1">Name:</strong>
+    <strong class="block font-medium mb-1"><%= t('activerecord.attributes.lead.name') %>:</strong>
     <%= lead.name %>
   </p>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Email:</strong>
+    <strong class="block font-medium mb-1"><%= t('activerecord.attributes.lead.email') %>:</strong>
     <%= lead.email %>
   </p>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Phone:</strong>
+    <strong class="block font-medium mb-1"><%= t('activerecord.attributes.lead.phone') %>:</strong>
     <%= lead.phone %>
   </p>
 
   <% if action_name != "show" %>
-    <%= link_to "Show this lead", lead, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to "Edit this lead", edit_lead_path(lead), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to t('views.leads.show_lead'), lead, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to t('views.leads.edit_lead'), edit_lead_path(lead), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
     <hr class="mt-6">
   <% end %>
 </div>

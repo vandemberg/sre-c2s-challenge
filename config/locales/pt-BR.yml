@@ -1,0 +1,116 @@
+pt-BR:
+  views:
+    leads:
+      index:
+        title: "Lista de Leads"
+      new_lead: "Novo lead"
+      show_lead: "Detalhes do Lead"
+    activerecord:
+      attributes:
+        lead:
+          name: "Nome"
+          email: "E-mail"
+          phone: "Telefone"
+
+  flash:
+    notice:
+      lead_created: "Lead criado com sucesso."
+      
+  
+  helpers:
+    submit:
+      create: "Criar %{model}"
+      update: "Atualizar %{model}"
+      submit: "Enviar"
+
+  activerecord:
+    models:
+      lead: "Lead"
+    attributes:
+      lead:
+        name: "Nome"
+        email: "E-mail"
+        phone: "Telefone"
+
+  actions:
+    edit: "Editar"
+    destroy: "Excluir"
+    back: "Voltar"
+    save: "Salvar"
+    cancel: "Cancelar"
+    create_new: "Criar Novo %{model}"
+    edit_lead: "Editar Lead"
+    destroy_lead: "Excluir Lead"
+    back_to_leads: "Voltar para Leads"
+
+  notices:
+    lead_created: "Lead criado com sucesso."
+    lead_updated: "Lead atualizado com sucesso."
+    lead_destroyed: "Lead excluído com sucesso."
+    lead_not_found: "Lead não encontrado."
+
+  titles:
+    leads: "Leads"
+    new_lead: "Novo Lead"
+    edit_lead: "Editar Lead"
+
+  errors:
+    messages:
+      cant_be_blank: "não pode ficar em branco"
+      not_a_number: "não é um número"
+
+  confirmations:
+    are_you_sure: "Você tem certeza?"
+
+  labels:
+    lead:
+      name: "Nome:"
+      email: "E-mail:"
+      phone: "Telefone:"
+
+
+  views:
+    leads:
+      show:
+        title: "Detalhes do Lead"
+        edit: "Editar Lead"
+        destroy: "Excluir Lead"
+        back_to_leads: "Voltar para Leads"
+        title: "Novo Lead"
+        back_to_leads: "Voltar para Leads"
+
+  notices:
+    lead_created: "Lead criado com sucesso."
+    lead_not_found: "Lead não encontrada."
+
+  views:
+    new_lead:
+      title: "Novo Lead"
+      back_to_leads: "Voltar para os Leads"
+
+    edit_lead:
+      title: "Editar Lead"
+
+    show_lead:
+      title: "Detalhes do Lead"
+
+    index_lead:
+      title: "Lista de Leads"
+      new_lead: "Novo Lead"
+
+    destroy_lead:
+      confirm_message: "Tem certeza que deseja excluir este lead?"
+      cancel: "Cancelar"
+    leads:
+      new_lead: "Novo lead"
+      show_lead: "Detalhes do Lead"
+      name_label: "Nome:"
+      email_label: "Email:"
+      phone_label: "Telefone:"
+      edit_lead: "Editar Lead"
+      destroy_lead: "Excluir Lead"
+      back_to_leads: "Voltar para Leads"
+      lead_not_found: "Lead não encontrado."
+      name: "Nome"
+      email: "E-mail"
+      phone: "Telefone"
