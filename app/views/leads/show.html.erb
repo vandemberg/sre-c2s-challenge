@@ -1,15 +1,15 @@
 <div class="mx-auto md:w-2/3 w-full flex">
   <div class="mx-auto">
-    <% if notice.present? %>
-      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+    <% flash.each do |type, message| %>
+      <p class="py-2 px-3 mb-5 font-medium rounded-lg inline-block <%= type == 'notice' ? 'bg-green-50 text-green-500' : 'bg-red-50 text-red-500' %>" id="<%= type %>"><%= message %></p>
     <% end %>
 
     <%= render @lead %>
 
-    <%= link_to "Edit this lead", edit_lead_path(@lead), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to t('leads.show.edit_link'), edit_lead_path(@lead), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <div class="inline-block ml-2">
-      <%= button_to "Destroy this lead", lead_path(@lead), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+      <%= button_to t('leads.show.destroy_link'), lead_path(@lead), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
     </div>
-    <%= link_to "Back to leads", leads_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to t('leads.new.back'), leads_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
   </div>
 </div>

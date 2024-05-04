@@ -8,15 +8,16 @@ pt-BR:
           has_one: Não é possível excluir o registro pois existe um %{record} dependente
           has_many: Não é possível excluir o registro pois existem %{record} dependentes
   leads:
-    back: "Voltar para as Leads"
     new:
       title: "Novo Lead"
+      back: "Voltar para Leads"
     form:
       name: "Nome"
-      email: "Email"
+      email: "E-mail"
       phone: "Telefone"
-      submit: "Enviar"
+      submit: "Atualizar Lead"
       errors: "Por favor, verifique os campos abaixo:"
+      create: "Criar Lead"
     create:
       success: "Lead criado com sucesso!"
     update:
@@ -29,6 +30,10 @@ pt-BR:
         not_found: "Lead não encontrado!"
     index:
       error: "Erro ao carregar as Leads!"
+    show:
+      show_link: "Ver Lead"
+      edit_link: "Editar Lead"
+      destroy_link: "Excluir Lead"
 
   date:
     abbr_day_names:
