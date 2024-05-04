@@ -1,6 +1,6 @@
 <div class="w-full">
-  <% if notice.present? %>
-    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+  <% flash.each do |type, message| %>
+    <p class="py-2 px-3 mb-5 font-medium rounded-lg inline-block <%= type == 'notice' ? 'bg-green-50 text-green-500' : 'bg-red-50 text-red-500' %>" id="<%= type %>"><%= message %></p>
   <% end %>
 
   <div class="flex justify-between items-center">
