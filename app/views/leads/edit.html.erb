@@ -1,12 +1,12 @@
 <div class="mx-auto md:w-2/3 w-full">
   <%= simple_form_for @lead, html: { class: "contents" } do |form| %>
-    <% if @lead.errors.any? %>
+    <% if @errors.present? && @errors.any? %>
       <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-        <h2><%= pluralize(@lead.errors.count, "error") %> prohibited this @lead from being saved:</h2>
+        <h2><%= t('leads.form.errors') %></h2>
 
         <ul>
-          <% @lead.errors.each do |error| %>
-            <li><%= error.full_message %></li>
+          <% @errors.each do |field, error| %>
+            <li><%= "#{field.capitalize}: #{error}" %></li>
           <% end %>
         </ul>
       </div>
