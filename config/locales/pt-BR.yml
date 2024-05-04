@@ -24,7 +24,7 @@ pt-BR:
         errors: "Erro ao criar o Lead!"
     destroy:
       success: "Lead excluído com sucesso!"
-      errors: "Erro ao excluir o Lead!"
+      error: "Erro ao excluir o Lead!"
     errors:
       show:
         not_found: "Lead não encontrado!"

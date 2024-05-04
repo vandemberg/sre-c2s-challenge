@@ -49,10 +49,18 @@ class LeadsController < ApplicationController
 
   # DELETE /leads/1 or /leads/1.json
   def destroy
-    @lead.destroy!
-
+    begin
+      @lead.destroy!
+    rescue ActiveRecord::RecordNotDestroyed => e
+      respond_to do |format|
+        format.html { redirect_to leads_url, notice: t('leads.destroy.error') }
+        format.json { render json: { error: t('leads.destroy.error') }, status: :unprocessable_entity }
+      end
+      return
+    end
+  
     respond_to do |format|
-      format.html { redirect_to leads_url, notice: "Lead was successfully destroyed." }
+      format.html { redirect_to leads_url, notice: t('leads.destroy.success') }
       format.json { head :no_content }
     end
   end
