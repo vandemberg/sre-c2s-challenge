@@ -3,7 +3,15 @@ class LeadsController < ApplicationController
 
   # GET /leads or /leads.json
   def index
-    @leads = Lead.all
+    begin
+      @leads = Lead.all
+    rescue => e
+      respond_to do |format|
+        format.html { redirect_to leads_url, notice: t('leads.index.error') }
+        format.json { render json: { error: t('leads.index.error') }, status: :unprocessable_entity }
+      end
+      return
+    end
   end
 
   # GET /leads/1 or /leads/1.json

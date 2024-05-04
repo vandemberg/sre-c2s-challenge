@@ -27,6 +27,8 @@ pt-BR:
     errors:
       show:
         not_found: "Lead não encontrado!"
+    index:
+      error: "Erro ao carregar as Leads!"
 
   date:
     abbr_day_names:
