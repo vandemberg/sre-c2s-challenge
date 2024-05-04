@@ -19,9 +19,8 @@ pt-BR:
       errors: "Por favor, verifique os campos abaixo:"
     create:
       success: "Lead criado com sucesso!"
-      update:
-        success: "Lead atualizado com sucesso!"
-        errors: "Erro ao criar o Lead!"
+    update:
+      success: "Lead atualizado com sucesso!"
     destroy:
       success: "Lead excluído com sucesso!"
       error: "Erro ao excluir o Lead!"
