@@ -1,0 +1,39 @@
+<div class="w-full">
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+  <% end %>
+
+  <div class="flex justify-between items-center">
+    <h1 class="font-bold text-4xl">Leads</h1>
+    <%= link_to "New lead", new_lead_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+  </div>
+
+  <div id="leads" class="min-w-full">
+    <%= render @leads %>
+  </div>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= t('leads.index.name') %></th>
+      <th><%= t('leads.index.email') %></th>
+      <th><%= t('leads.index.phone') %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @leads.each do |lead| %>
+      <tr>
+        <td><%= lead.name %></td>
+        <td><%= lead.email %></td>
+        <td><%= lead.phone %></td>
+        <td><%= link_to t('leads.index.edit_lead'), edit_lead_path(lead) %></td>
+        <td><%= link_to t('leads.index.delete_lead'), lead_path(lead), method: :delete, data: { confirm: t('leads.index.delete_confirm') } %></td>
+      <td><%= link_to t('leads.index.show'), lead %></td>  
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+
+<%= link_to t('leads.index.new_lead'), new_lead_path %>
