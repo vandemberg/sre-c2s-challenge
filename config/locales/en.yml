@@ -1,31 +1,26 @@
-# Files in the config/locales directory are used for internationalization and
-# are automatically loaded by Rails. If you want to use locales other than
-# English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more about the API, please read the Rails Internationalization guide
-# at https://guides.rubyonrails.org/i18n.html.
-#
-# Be aware that YAML interprets the following case-insensitive strings as
-# booleans: `true`, `false`, `on`, `off`, `yes`, `no`. Therefore, these strings
-# must be quoted to be interpreted as strings. For example:
-#
-#     en:
-#       "yes": yup
-#       enabled: "ON"
-
 en:
   hello: "Hello world"
+  edit_lead: "Edit this lead"
+  destroy_lead: "Destroy this lead"
+  back_to_leads: "Back to leads"
+  leads:
+    title: "Leads"
+    new_lead: "New lead"
+    update_lead: "Update lead"
+    error_count: "error"
+    error_prohibited: "prohibited this lead from being saved"
+    create_success: "Lead was successfully created."
+    update_success: "Lead was successfully updated."
+    destroy_success: "Lead was successfully destroyed."
+  lead:
+    name: "Name"
+    email: "Email"
+    phone: "Phone"
+    show_lead: "Show this lead"
+    edit_lead: "Edit this lead"
+    new_lead: "New lead"
+    email_presence: "Email can't be blank"
+    email_format: "Invalid email format"
+    name_presence: "Name can't be blank"
+    phone_presence: "Phone can't be blank"
+    phone_format: "Phone only allows numbers"
