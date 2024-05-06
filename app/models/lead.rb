@@ -1,14 +1,9 @@
 class Lead < ApplicationRecord
-  before_save :downcase_email
   before_save :format_phone
 
-  validates :email, presence: true, uniqueness: false, format: { with: URI::MailTo::EMAIL_REGEXP, message: :invalid }
+  validates :email, presence: true, uniqueness: { case_sensitive: false }, email: true
   validates :name, presence: true
   validates :phone, presence: true, format: { with: /\A\(?\d{2}\)?\s?\d{4,5}-?\d{4}\z/, message: :invalid }
-
-  def downcase_email
-    self.email = email.downcase
-  end
 
   def format_phone
     cleaned_phone = phone.gsub(/[^0-9]/, "")

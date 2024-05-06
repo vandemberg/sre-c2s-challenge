@@ -173,6 +173,7 @@ pt-BR:
       header:
         one: "Não foi possível gravar %{model}: %{count} erro"
         other: "Não foi possível gravar %{model}: %{count} erros"
+    invalid_email: "E-mail inválido"
   helpers:
     select:
       prompt: Por favor selecione
