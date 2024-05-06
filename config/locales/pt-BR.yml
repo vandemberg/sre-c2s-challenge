@@ -10,7 +10,6 @@ pt-BR:
   leads:
     new:
       title: "Novo Lead"
-      back: "Voltar para Leads"
     form:
       name: "Nome"
       email: "E-mail"
@@ -18,6 +17,8 @@ pt-BR:
       submit: "Atualizar Lead"
       errors: "Por favor, verifique os campos abaixo:"
       create: "Criar Lead"
+      save: "Salvar Lead"
+      cancel: "Cancelar"
     create:
       success: "Lead criado com sucesso!"
     update:
@@ -34,6 +35,8 @@ pt-BR:
       show_link: "Ver Lead"
       edit_link: "Editar Lead"
       destroy_link: "Excluir Lead"
+    edit:
+      title: "Editar Lead"
 
   date:
     abbr_day_names:

@@ -1,35 +1,5 @@
 <div class="mx-auto md:w-2/3 w-full">
-  <%= simple_form_for @lead, html: { class: "contents" } do |form| %>
-    <% if @errors.present? && @errors.any? %>
-      <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-        <h2><%= t('leads.form.errors') %></h2>
+  <h1 class="font-bold text-4xl"><%= link_to t('leads.edit.title'), leads_path %></h1>
 
-        <ul>
-          <% @errors.each do |field, error| %>
-            <li><%= "#{field.capitalize}: #{error}" %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
-
-    <div class="my-5">
-      <%= form.label t('leads.form.name') %>
-      <%= form.text_field :name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-    </div>
-
-    <div class="my-5">
-      <%= form.label t('leads.form.email') %>
-      <%= form.text_field :email, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-    </div>
-
-    <div class="my-5">
-      <%= form.label t('leads.form.phone') %>
-      <%= form.text_field :phone, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-    </div>
-
-    <div class="inline">
-      <%= form.submit t('leads.form.submit'), class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
-      <%= link_to t('leads.new.back'), leads_path, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium mt-5" %>
-    </div>
-  <% end %>
+  <%= render "form", lead: @lead %>
 </div>

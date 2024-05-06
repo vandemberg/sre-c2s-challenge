@@ -1,20 +1,22 @@
-<%= form_with(model: lead, class: "contents") do |form| %>
+<%= simple_form_for(lead, html: { class: 'contents', novalidate: true }) do |f| %>
   <div class="my-5">
-    <%= form.label t('leads.form.name') %>
-    <%= form.text_field :name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= f.input :name, label: t('leads.form.name'), error: false, input_html: { class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" } %>
+    <%= f.error :name, class: 'text-red-500'%>
   </div>
 
   <div class="my-5">
-    <%= form.label t('leads.form.email') %>
-    <%= form.text_field :email, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= f.input :email, label: t('leads.form.email'), error: false, input_html: { class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" } %>
+    <%= f.error :email, class: 'text-red-500'%>
   </div>
 
   <div class="my-5">
-    <%= form.label t('leads.form.phone') %>
-    <%= form.text_field :phone, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= f.input :phone, label: t('leads.form.phone'), error: false, input_html: { class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" } %>
+    <%= f.error :phone, class: 'text-red-500'%>
   </div>
 
   <div class="inline">
-    <%= form.submit t('leads.form.create'), class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+    <%= f.button :submit, t('leads.form.create'), class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
   </div>
+
+  <%= link_to t('leads.form.cancel'), leads_path, class: "rounded-lg py-3 px-5 bg-gray-200 text-gray-700 inline-block font-medium cursor-pointer" %>
 <% end %>

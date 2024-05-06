@@ -37,7 +37,7 @@ class LeadsController < ApplicationController
         format.json { render :show, status: :ok, location: @lead }
       else
         @errors = @lead.errors.messages.transform_values(&:first)
-        format.html { render :edit, status: :unprocessable_entity }
+        format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @errors, status: :unprocessable_entity }
       end
     end
