@@ -1,60 +1,62 @@
 class LeadsController < ApplicationController
-  before_action :set_lead, only: %i[ show edit update destroy ]
+  before_action :set_lead, only: %i[show edit update destroy]
 
   # GET /leads or /leads.json
   def index
     @leads = Lead.all
+    @stl= t('stl')
+    @etl= t('etl')
+    @new_lead= t('new_lead')
+    @destroy_lead= t('destroy_lead')
+    @back_to_leads= t('back_to_leads')
   end
 
   # GET /leads/1 or /leads/1.json
   def show
+    @stl= t('stl')
+    @etl= t('etl')
+    @destroy_lead= t('destroy_lead')
+    @back_to_leads= t('back_to_leads')
   end
 
   # GET /leads/new
   def new
+    @back_to_leads= t('back_to_leads')
+    @name= t('name')
     @lead = Lead.new
   end
 
   # GET /leads/1/edit
   def edit
+    @stl= t('stl')
+    @etl= t('etl')
+    @update= t('update')
   end
 
   # POST /leads or /leads.json
   def create
     @lead = Lead.new(lead_params)
-
-    respond_to do |format|
-      if @lead.save
-        format.html { redirect_to lead_url(@lead), notice: "Lead was successfully created." }
-        format.json { render :show, status: :created, location: @lead }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @lead.errors, status: :unprocessable_entity }
-      end
+    if @lead.save
+      redirect_to leads_path, notice: 'Lead criado com sucesso.'
+    else
+      render :new, status: :unprocessable_entity
     end
   end
 
   # PATCH/PUT /leads/1 or /leads/1.json
   def update
-    respond_to do |format|
-      if @lead.update(lead_params)
-        format.html { redirect_to lead_url(@lead), notice: "Lead was successfully updated." }
-        format.json { render :show, status: :ok, location: @lead }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @lead.errors, status: :unprocessable_entity }
-      end
+    if @lead.update(lead_params)
+      redirect_to lead_url(@lead), notice: "Lead foi atualizado com sucesso."
+    else
+      render :edit, status: :unprocessable_entity
     end
   end
 
   # DELETE /leads/1 or /leads/1.json
   def destroy
-    @lead.destroy!
-
-    respond_to do |format|
-      format.html { redirect_to leads_url, notice: "Lead was successfully destroyed." }
-      format.json { head :no_content }
-    end
+    @destroy_lead= t('destroy_lead')
+    @lead.destroy
+    redirect_to leads_url, notice: "Lead foi excluído com sucesso."
   end
 
   private
@@ -65,6 +67,6 @@ class LeadsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def lead_params
-      params.require(:lead).permit(:email)
+      params.require(:lead).permit(:name, :email, :phone)
     end
 end

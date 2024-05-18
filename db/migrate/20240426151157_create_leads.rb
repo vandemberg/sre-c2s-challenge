@@ -3,7 +3,7 @@ class CreateLeads < ActiveRecord::Migration[7.1]
     create_table :leads do |t|
       t.string :name
       t.string :email
-      t.decimal :phone
+      t.string :phone
 
       t.timestamps
     end

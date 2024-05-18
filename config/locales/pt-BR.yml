@@ -1,0 +1,11 @@
+pt-BR:
+  name: "Nome"
+  phone: "Telefone"
+  stl: "Exibir lead"
+  etl: "Editar lead"
+  new_lead: "Novo lead"
+  destroy_lead: "Excluir lead"
+  back_to_leads: "Voltar para Leads"
+  nl: "Novo Lead"
+  update: "Atualizar lead"
+  create: "Criar Lead"

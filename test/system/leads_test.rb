@@ -30,7 +30,7 @@ class LeadsTest < ApplicationSystemTestCase
     fill_in "Email", with: @lead.email
     fill_in "Name", with: @lead.name
     fill_in "Phone", with: @lead.phone
-    click_on "Update Lead"
+    click_on "lucas"
 
     assert_text "Lead was successfully updated"
     click_on "Back"

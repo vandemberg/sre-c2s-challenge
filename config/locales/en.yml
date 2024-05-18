@@ -28,4 +28,14 @@
 #       enabled: "ON"
 
 en:
-  hello: "Hello world"
+  name: "name"
+  phone: "phone"
+  stl: "Show this lead"
+  etl: "Edit this lead"
+  new_lead: "New lead"
+  destroy_lead: "Destroy lead"
+  back_to_leads: "Back to Leads"
+  nl: "New Lead"
+  update: "Update lead"
+  create: "Create Lead"
+
