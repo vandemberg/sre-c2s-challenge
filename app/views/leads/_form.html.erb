@@ -1,20 +1,19 @@
 <%= form_with(model: lead, class: "contents") do |form| %>
   <% if lead.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-      <h2><%= pluralize(lead.errors.count, "error") %> prohibited this lead from being saved:</h2>
-
       <ul>
-        <% lead.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+        <% lead.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
 
   <div class="my-5">
-    <%= form.label :name %>
-    <%= form.text_field :name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
+  <%= form.label :name, t('name') %>
+  <%= form.text_field :name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+</div>
+
 
   <div class="my-5">
     <%= form.label :email %>
@@ -22,11 +21,24 @@
   </div>
 
   <div class="my-5">
-    <%= form.label :phone %>
-    <%= form.text_field :phone, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
+  <%= form.label :phone, t('phone') %>
+  <%= form.telephone_field :phone, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full", placeholder: "(99) 99999-9999" %>
+</div>
 
   <div class="inline">
-    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+    <%= form.submit t('create'), class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
   </div>
 <% end %>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var phoneField = document.querySelector('input[type="tel"]');
+    phoneField.addEventListener("input", function() {
+      var value = phoneField.value.replace(/\D/g, "");
+      if (value.length > 0) {
+        value = value.replace(/^(\d{2})(\d{5})(\d{4})$/, "($1) $2-$3");
+      }
+      phoneField.value = value;
+    });
+  });
+</script>

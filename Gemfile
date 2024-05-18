@@ -67,3 +67,10 @@ group :test do
 end
 
 gem "tailwindcss-rails", "~> 2.4"
+
+# Add simple_form gem
+gem "simple_form"
+
+gem 'mail'
+
+gem 'webpacker', '~> 5.0'
