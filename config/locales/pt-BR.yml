@@ -1,0 +1,38 @@
+pt-BR:
+  activerecord:
+    models:
+      lead: "Lead"
+    attributes:
+      lead:
+        name: "Nome"
+        email: "Email"
+        phone: "Telefone"
+  errors:
+    template:
+      header:
+        one: "%{count} erro impediu que este %{model} fosse salvo:"
+        other: "%{count} erros impediram que este %{model} fosse salvo:"
+      body: "Houve problemas com os seguintes campos:"
+  helpers:
+    submit:
+      create: "Criar %{model}"
+      update: "Atualizar %{model}"
+  leads:
+    index:
+      title: "Leads"
+      new_lead: "Novo Lead"
+      notice: "Lead criado com sucesso"
+    new:
+      title: "Novo Lead"
+      back_to_leads: "Voltar para Leads"
+    edit:
+      title: "Editar Lead"
+      back_to_leads: "Voltar para Leads"
+    show:
+      show_lead: "Mostrar este Lead"
+      edit_lead: "Editar este Lead"
+    form:
+      name: "Nome"
+      email: "Email"
+      phone: "Telefone"
+      submit: "Salvar Lead"
