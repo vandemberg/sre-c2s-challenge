@@ -69,3 +69,5 @@ end
 gem "tailwindcss-rails", "~> 2.4"
 
 gem "webpacker", "~> 5.4"
+
+gem 'i18n'
