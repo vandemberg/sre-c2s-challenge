@@ -1,0 +1,71 @@
+pt-BR:
+  activerecord:
+    models:
+      lead: "Lead"
+    attributes:
+      lead:
+        name: "Nome"
+        email: "Email"
+        phone: "Telefone"
+  errors:
+    template:
+      header:
+        one: "%{count} erro impediu que este %{model} fosse salvo:"
+        other: "%{count} erros impediram que este %{model} fosse salvo:"
+      body: "Houve problemas com os seguintes campos:"
+      attributes:
+            email:
+              blank: "não pode ficar em branco"
+              invalid: "não é válido"
+            name:
+              blank: "não pode ficar em branco"
+            phone:
+              blank: "não pode ficar em branco"
+      messages:
+        record_invalid: "A validação falhou: %{errors}"
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      blank: "não pode ficar em branco"
+      invalid: "não é válido"
+      taken: "já está em uso"
+    template:
+      header:
+        one: "%{count} erro impediu que este %{model} fosse salvo:"
+        other: "%{count} erros impediram que este %{model} fosse salvo:"
+      body: "Houve problemas com os seguintes campos:"
+  helpers:
+    submit:
+      create: "Criar %{model}"
+      update: "Atualizar %{model}"
+  leads:
+    lead:
+      name: "Nome"
+      phone: "Telefone"
+    index:
+      title: "Leads"
+      new_lead: "Novo Lead"
+      notice: "Lead criado com sucesso"
+    new:
+      title: "Novo Lead"
+      back_to_leads: "Voltar para Leads"
+    edit:
+      title: "Editar Lead"
+      back_to_leads: "Voltar para Leads"
+    show:
+      show_lead: "Mostrar este Lead"
+      edit_lead: "Editar este Lead"
+      destroy_lead: "Excluir este Lead"
+    form:
+      name: "Nome"
+      phone: "Telefone"
+      submit: "Salvar Lead"
+  views:
+    common:
+      name: "Nome"
+      phone: "Telefone"
+      show_lead: "Mostrar este Lead"
+      edit_lead: "Editar este Lead"
+      back_to_leads: "Voltar para Leads"
+      destroy_lead: "Excluir este Lead"
+      new_lead: "Novo Lead"

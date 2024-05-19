@@ -6,10 +6,10 @@
 
     <%= render @lead %>
 
-    <%= link_to "Edit this lead", edi_lead_path(@lead), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to t('views.common.edit_lead'), edit_lead_path(@lead), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <div class="inline-block ml-2">
-      <%= button_to "Destroy this lead", lead_path(@lea), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+      <%= button_to t('views.common.destroy_lead'), lead_path(@lead), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
     </div>
-    <%= link_to "Back to leads", leads_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to t('views.common.back_to_leads'), leads_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
   </div>
 </div>

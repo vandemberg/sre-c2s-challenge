@@ -28,4 +28,38 @@
 #       enabled: "ON"
 
 en:
-  hello: "Hello world"
+  errors:
+    template:
+      header:
+        one: "%{count} error prohibited this %{model} from being saved:"
+        other: "%{count} error prohibited this %{model} from being saved:"
+    lead:
+      name: "Name"
+      phone: "Phone"
+    index:
+      title: "Leads"
+      new_lead: "New lead"
+      notice: "Lead was successfully created"
+    new:
+      title: "New Lead"
+      back_to_leads: "Back to leads"
+    edit:
+      title: "Edit Lead"
+      back_to_leads: "Back to leads"
+    show:
+      show_lead: "Show this lead"
+      edit_lead: "Edit this lead"
+      destroy_lead: "Destroy this lead"
+    form:
+      name: "Name"
+      phone: "Phone"
+      submit: "Save Lead"
+  views:
+    common:
+      name: "Name"
+      phone: "Phone"
+      show_lead: "Show this lead"
+      edit_lead: "Edit this lead"
+      back_to_leads: "Back to leads"
+      destroy_lead: "Destroy this lead"
+      new_lead: "New lead"
